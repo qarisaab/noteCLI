@@ -12,8 +12,8 @@ export const newNote = async (note, tags) => {
 };
 
 export const getAllNotes = async () => {
-  const notes = await get_db();
-  return notes.content;
+  const db = await get_db();
+  return db.notes;
 };
 
 export const findNote = async (string) => {
